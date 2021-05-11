@@ -1,5 +1,8 @@
 ## Welcome to GitHub Pages
 
+<script> document.cookie = "session=test GDPR"; document.cookie = "favorite_task=collect Data"; function alertCookie() { alert(document.cookie); } </script>
+<body> Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button> </body>
+
 You can use the [editor on GitHub](https://github.com/dianacristian0323/dianaLab/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
@@ -27,8 +30,7 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
-<script> document.cookie = "session=test GDPR"; document.cookie = "favorite_task=collect Data"; function alertCookie() { alert(document.cookie); } </script>
-<body> Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button> </body>
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
