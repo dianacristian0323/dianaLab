@@ -24,10 +24,7 @@ function alertCookieValue() {
 
 <body> 
   COOKIES: <button onclick="alertCookie()">Show cookies</button> 
-  document.cookie = newCookie;
-
-## COOKIES Get a sample cookie named test2
-
- TEST 2: <button onclick="alertCookieValue()">Show cookie value</button>
+<br>
+ Get a sample cookie named test2: <button onclick="alertCookieValue()">Show cookie value</button>
 
 </body>
