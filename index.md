@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## COOKIES
 
 <script> 
   document.cookie = "session=test GDPR"; 
@@ -6,10 +6,10 @@
   document.cookie = "username=Diana C";
   document.cookie = "browser=chrome";
   document.cookie = "browser=chrome";
-  document.cookie = "expires=Fri, 11 Dec 2019 14:00:00 UTC";
+  document.cookie = "expires=Fri, 11 Dec 2030 14:00:00 UTC";
   function alertCookie() { alert(document.cookie); } 
 </script>
 
 <body> 
-  Cookies: <button onclick="alertCookie()">Show cookies</button> 
+  COOKIES: <button onclick="alertCookie()">Show cookies</button> 
 </body>
