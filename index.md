@@ -79,7 +79,7 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
 <br>
   Reset the previous cookie: <button onclick="resetOnce()">Reset only once cookie</button>
 <br>
-   Check a cookie existence: 
+   Check a cookie existence
  <br>
-  Check that a cookie has a specific value: 
+  Check that a cookie has a specific value
 </body>
