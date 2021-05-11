@@ -71,13 +71,13 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
 </script>
 
 <body> 
-  COOKIES: <button background-color: #f44336 onclick="alertCookie()">Show cookies</button> 
+  COOKIES: <button class="btn btn-info" onclick="alertCookie()">Show cookies</button> 
 <br>
   Get a sample cookie named test2: <button onclick="alertCookieValue()">Show cookie value</button>
 <br>
-  Do something only once: <button onclick="doOnce()">Only do something once</button>
+  Do something only once: <button class="btn btn-info" onclick="doOnce()">Only do something once</button>
 <br>
-  Reset the previous cookie: <button onclick="resetOnce()">Reset only once cookie</button>
+  Reset the previous cookie: <button class="btn btn-info" onclick="resetOnce()">Reset only once cookie</button>
 <br>
    Check a cookie existence
  <br>
