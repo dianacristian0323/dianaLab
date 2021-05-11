@@ -71,7 +71,7 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
 </script>
 
 <body> 
-  COOKIES: <button onclick="alertCookie()">Show cookies</button> 
+  COOKIES: <button background-color: #f44336 onclick="alertCookie()">Show cookies</button> 
 <br>
   Get a sample cookie named test2: <button onclick="alertCookieValue()">Show cookie value</button>
 <br>
