@@ -3,9 +3,13 @@
 <script> 
   document.cookie = "session=test GDPR"; 
   document.cookie = "favorite_task=collect Data"; 
+  document.cookie = "username=Diana C";
+  document.cookie = "browser=chrome";
+  document.cookie = "browser=chrome";
+  document.cookie = "expires=Fri, 11 Dec 2019 14:00:00 UTC";
   function alertCookie() { alert(document.cookie); } 
 </script>
 
 <body> 
-  Bine ai venit la lab <button onclick="alertCookie()">Show cookies</button> 
+  Cookies: <button onclick="alertCookie()">Show cookies</button> 
 </body>
