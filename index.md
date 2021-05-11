@@ -8,8 +8,26 @@
   document.cookie = "browser=chrome";
   document.cookie = "expires=Fri, 11 Dec 2030 14:00:00 UTC";
   function alertCookie() { alert(document.cookie); } 
+  
+  document.cookie = "test1=Hello";
+document.cookie = "test2=World";
+
+const cookieValue = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('test2='))
+  .split('=')[1];
+
+function alertCookieValue() {
+  alert(cookieValue);
+}
 </script>
 
 <body> 
   COOKIES: <button onclick="alertCookie()">Show cookies</button> 
+  document.cookie = newCookie;
+
+## COOKIES Get a sample cookie named test2
+
+ TEST 2: <button onclick="alertCookieValue()">Show cookie value</button>
+
 </body>
