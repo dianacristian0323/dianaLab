@@ -67,6 +67,20 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
     console.log('The cookie "reader" has "1" for value')
 }
 
+  function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+function GetCookies() {
+    document.getElementById('txtFirstName').value = getCookie('CTFirstName');
+}
 
 </script>
 
@@ -82,4 +96,7 @@ if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
    Check a cookie existence
  <br>
   Check that a cookie has a specific value
+  
+  <body onunload="WriteCookies()" onload="GetCookies()">
+
 </body>
