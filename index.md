@@ -5,9 +5,15 @@
   	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
   </div>
 <br>
-  Nume utilizator: <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
+   <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
   <br>
- Versiune browser: 
+  Nume utilizator:<span id="usernameCookie"> </span>
+  <br>
+ Versiune browser: <span id="browserVersionCookie"> </span>
+  
+  <br>
+  <a href="https://didatec-my.sharepoint.com/personal/cristian_is_diana_utcluj_didatec_ro/_layouts/15/doc.aspx?sourcedoc={8cb11dbf-1ff3-4dbf-97f9-72e446aab3e6}&action=edit">
+
   
 </body>
               
@@ -21,11 +27,15 @@
   function alertCookie() { alert(document.cookie); } 
   
  
- const cookieValue = document.cookie
-    .split('; ')
-    .find(row => row.startsWith('test2='))
-    .split('=')[1];
 
+  function setUsernameCookie(){
+		let element = document.getElementById('username');
+		document.cookie = "numeStudent="+element.value;
+		let btn1 = document.getElementById('addUsernameCookie');
+		btn1.style="display:none";
+		document.getElementById('usernameCookie').innerHTML=element.value;
+	}
+  
   function alertCookieValue() {
     alert(cookieValue);
   }
