@@ -12,8 +12,12 @@
  Versiune browser: <span id="browserVersionCookie"> </span>
   
   <br>
+	<div>
   <a title="Analiza DPIA" href="https://didatec-my.sharepoint.com/personal/cristian_is_diana_utcluj_didatec_ro/_layouts/15/doc.aspx?sourcedoc={8cb11dbf-1ff3-4dbf-97f9-72e446aab3e6}&action=edit">
 	</a>
+	</div>
+
+	
   
 </body>
               
