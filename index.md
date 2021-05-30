@@ -5,7 +5,7 @@
   	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
   </div>
 <br>
-  Nume utilizator: <button class="btn btn-success custom" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
+  Nume utilizator: <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
   <br>
  Versiune browser: 
   
