@@ -1,5 +1,14 @@
 ## COOKIES
 
+<body> 
+  <div class='row">
+  	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
+  </div>
+
+  Nume utilizator: <button class="btn btn-success custom" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
+  
+ Versiune browser: 
+
 <script> 
   document.cookie = "session=test GDPR"; 
   document.cookie = "favorite_task=collect Data"; 
@@ -9,8 +18,7 @@
   document.cookie = "expires=Fri, 11 Dec 2030 14:00:00 UTC";
   function alertCookie() { alert(document.cookie); } 
   
-  
-  
+ 
   document.cookie = "test1=Hello";
   document.cookie = "test2=World";
 
@@ -23,49 +31,6 @@
     alert(cookieValue);
   }
 
-
-function doOnce() {
-  if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
-    alert("Do something here!");
-    document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 2021 23:59:59 GMT";
-  }
-}
-
-
-function resetOnce() {
-  document.cookie = "doSomethingOnlyOnce=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-}
-
-
-//ES5
-
-if (document.cookie.split(';').some(function(item) {
-    return item.trim().indexOf('reader=') == 0
-})) {
-    console.log('The cookie "reader" exists (ES5)')
-}
-
-//ES2016
-
-if (document.cookie.split(';').some((item) => item.trim().startsWith('reader='))) {
-    console.log('The cookie "reader" exists (ES6)')
-}
-
-
-
-//ES5
-
-if (document.cookie.split(';').some(function(item) {
-    return item.indexOf('reader=1') >= 0
-})) {
-    console.log('The cookie "reader" has "1" for value')
-}
-
-//ES2016
-
-if (document.cookie.split(';').some((item) => item.includes('reader=1'))) {
-    console.log('The cookie "reader" has "1" for value')
-}
 
   function getCookie(cname) {
     var name = cname + "=";
@@ -83,19 +48,32 @@ function GetCookies() {
 }
 
 </script>
+  
+// Opera 8.0+
+var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
 
-<body> 
-  COOKIES: <button class="btn btn-info" onclick="alertCookie()">Show cookies</button> 
-<br>
-  Get a sample cookie named test2: <button onclick="alertCookieValue()">Show cookie value</button>
-<br>
-  Do something only once: <button class="btn btn-info" onclick="doOnce()">Only do something once</button>
-<br>
-  Reset the previous cookie: <button class="btn btn-info" onclick="resetOnce()">Reset only once cookie</button>
-<br>
-   Check a cookie existence
- <br>
-  Check that a cookie has a specific value
+// Firefox 1.0+
+var isFirefox = typeof InstallTrigger !== 'undefined';
+
+// Safari 3.0+ "[object HTMLElementConstructor]" 
+var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+// Internet Explorer 6-11
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
+
+// Edge 20+
+var isEdge = !isIE && !!window.StyleMedia;
+
+// Chrome 1 - 79
+var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
+// Edge (based on chromium) detection
+var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+
+// Blink engine detection
+var isBlink = (isChrome || isOpera) && !!window.CSS;
+
+
   
   <body onunload="WriteCookies()" onload="GetCookies()">
 
