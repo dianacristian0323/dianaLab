@@ -8,6 +8,7 @@
   Nume utilizator: <button class="btn btn-success custom" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
   
  Versiune browser: 
+  
 </body>
               
 <script> 
@@ -45,7 +46,6 @@ function GetCookies() {
     document.getElementById('txtFirstName').value = getCookie('CTFirstName');
 }
 
-</script>
   
 // Opera 8.0+
 var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
@@ -72,5 +72,6 @@ var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 
-  
+  </script>
+
 
