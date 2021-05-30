@@ -1,14 +1,15 @@
 ## COOKIES
 
 <body> 
-  <div class='row">
+  <div class="row">
   	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
   </div>
 
   Nume utilizator: <button class="btn btn-success custom" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
   
  Versiune browser: 
-
+</body>
+              
 <script> 
   document.cookie = "session=test GDPR"; 
   document.cookie = "favorite_task=collect Data"; 
@@ -19,10 +20,7 @@
   function alertCookie() { alert(document.cookie); } 
   
  
-  document.cookie = "test1=Hello";
-  document.cookie = "test2=World";
-
-  const cookieValue = document.cookie
+ const cookieValue = document.cookie
     .split('; ')
     .find(row => row.startsWith('test2='))
     .split('=')[1];
@@ -75,6 +73,4 @@ var isBlink = (isChrome || isOpera) && !!window.CSS;
 
 
   
-  <body onunload="WriteCookies()" onload="GetCookies()">
 
-</body>
