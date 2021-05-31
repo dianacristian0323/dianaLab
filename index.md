@@ -4,12 +4,14 @@
   <div class="row">
   	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
   </div>
+	
 <br>
-   <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
+   <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Seteaza username COOKIE</button>
   <br>
-  <b>Nume utilizator:</b><span id="usernameCookie"> </span>
+	<hr>
+  <b>Nume utilizator: </b><span id="usernameCookie"> </span>
   <br>
- <b>Versiune browser:</b><span id="browserVersionCookie"> </span>
+ <b>Versiune browser : </b><span id="browserVersionCookie"> </span>
   <br>
 	  <p><b>Nota de informare:</b></p>
 	<p><b>NOTĂ DE INFORMARE PRIVIND PROTECŢIA DATELOR PERSONALE</b></p>
