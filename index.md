@@ -8,7 +8,6 @@
 <br>
    <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Seteaza username COOKIE</button>
   <br>
-	<hr>
   <b>Nume utilizator: </b><span id="usernameCookie"> </span>
   <br>
  <b>Versiune browser : </b><span id="browserVersionCookie"> </span>
