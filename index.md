@@ -7,7 +7,7 @@
 <br>
    <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
   <br>
-  <b>Nume utilizator:<b><span id="usernameCookie"> </span>
+  <b>Nume utilizator:</b><span id="usernameCookie"> </span>
   <br>
  <b>Versiune browser:</b><span id="browserVersionCookie"> </span>
   <br>
@@ -21,7 +21,6 @@ Refuzul dvs. determină imposibilitatea efectuării stagiului (sfârșitul stagi
 Conform Legii nr. 677/2001, beneficiaţi de dreptul de acces, de intervenţie asupra datelor, dreptul de a nu fi supus unei decizii individuale şi dreptul de a vă adresa justiţiei. Totodată, aveţi dreptul să vă opuneţi prelucrării datelor personale care vă privesc şi să solicitaţi ştergerea datelor. Pentru exercitarea acestor drepturi, vă puteţi adresa cu o cerere scrisă, datată şi semnată la Biroul pentru Protectia Datelor cu Caracter Personal. De asemenea, vă este recunoscut dreptul de a vă adresa justiţiei. 
 Datele dumneavoastră vor fi transferate în UK, în vederea stabilirii detaliilor legate de stagiul de mobilitate pe care îl veți avea. </p>
 <p>Dacă unele din datele despre dumneavoastră sunt incorecte, vă rugăm să ne informaţi cât mai curând posibil.</p>
-
 
   <br>
 	<div>
