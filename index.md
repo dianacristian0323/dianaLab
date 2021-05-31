@@ -1,9 +1,14 @@
 ## COOKIES
 
-<body> 
+<body onload="insertText();"> 
   <div class="row">
   	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
   </div>
+	<table>
+        <tr>
+            <td id="td1"></td>
+        </tr>
+    </table>
 <br>
    <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Salveaza</button>
   <br>
@@ -24,14 +29,17 @@ Datele dumneavoastră vor fi transferate în UK, în vederea stabilirii detaliil
 
   <br>
 	<div>
-  <a href="https://didatec-my.sharepoint.com/personal/cristian_is_diana_utcluj_didatec_ro/_layouts/15/doc.aspx?sourcedoc={8cb11dbf-1ff3-4dbf-97f9-72e446aab3e6}&action=edit">Analiza DPIA</a>
+  <b><a href="https://didatec-my.sharepoint.com/personal/cristian_is_diana_utcluj_didatec_ro/_layouts/15/doc.aspx?sourcedoc={8cb11dbf-1ff3-4dbf-97f9-72e446aab3e6}&action=edit">Analiza DPIA</a></b>
 	</div>
 
 	
   
 </body>
               
-<script> 
+<script type="text/javascript"> 
+	function insertText () {
+    document.getElementById('td1').innerHTML = "Some text to enter";
+}
   document.cookie = "session=test GDPR"; 
   document.cookie = "favorite_task=collect Data"; 
   document.cookie = "username=Diana C";
