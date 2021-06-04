@@ -2,17 +2,15 @@
 
 <body> 
   <div class="row">
+	<b>Introduceti numele de utilizator:</b>
   	<input id="username" type="text" class="form-control " placeholder="username" aria-label="username">
   </div>
 	
-<br>
-   <button class="btn" type="button" id="addUsernameCookie" onclick="setUsernameCookie()">Seteaza username COOKIE</button>
+  <button class="btn" type="button" id="addUsernameCookie" onclick="setCookies();parseAndDisplayCookies()">Seteaza username COOKIE</button>
   <br>
   <b>Nume utilizator: </b><span id="usernameCookie"> </span>
-  <br>
- <b>Versiune browser : </b><span id="browserVersionCookie"> </span>
+  <b>Versiune browser : </b><span id="browserVersionCookie"> </span>
 	<hr>
-	  <br>
 	<div>
   <b><a href="https://didatec-my.sharepoint.com/:w:/r/personal/cristian_is_diana_utcluj_didatec_ro/_layouts/15/Doc.aspx?sourcedoc=%7B06670782-017A-443A-B220-CFC0D0005D1C%7D&file=DPIA_CristianDianaMaria.docx&action=default&mobileredirect=true">Analiza DPIA</a></b>
 	</div>
@@ -28,19 +26,64 @@ Conform Legii nr. 677/2001, beneficiaţi de dreptul de acces, de intervenţie as
 Datele dumneavoastră vor fi transferate în UK, în vederea stabilirii detaliilor legate de stagiul de mobilitate pe care îl veți avea. </p>
 <p>Dacă unele din datele despre dumneavoastră sunt incorecte, vă rugăm să ne informaţi cât mai curând posibil.</p>
 
-
-
 </body>
               
 <script>
-	function alertCookieValue() {alert(cookieValue);}
- 
-  function setUsernameCookie(){
-		let element = document.getElementById('username');
-		document.cookie = "numeStudent="+element.value;
-		let btn1 = document.getElementById('addUsernameCookie');
-		btn1.style="display:none";
-		document.getElementById('usernameCookie').innerHTML=element.value;
+ 	   function setCookies(){
+		var usernameElement = document.getElementById('username');
+		document.cookie = "usernameCookie=" + usernameElement.value +'; ';
+		document.cookie = "browserCookie=" + navigator.userAgent ; //detectBrowser();
+		}
+		
+	   function parseAndDisplayCookies(){
+			var username = getCookie("usernameCookie");
+			var browser = getCookie("browserCookie");
+			document.getElementById("usernameCookie").innerHTML = username;
+			document.getElementById("browserVersionCookie").innerHTML = browser;
+	   }
+
+		
+	   function retrieveUsernameFromCookie(){
+		 var cookies = document.cookie.split("; ");
+		 var usernameCookie = cookies[0]; 
+		 var browsewrCookie = cookies[1];
+		 console.log(cookies);
+		 console.log(usernameCookie);
+		 console.log(browsewrCookie);
+		 }
+	
+		//gets the type of browser (stackoverflow)
+		function detectBrowser() { 
+			if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+				return 'Opera';
+			} else if(navigator.userAgent.indexOf("Chrome") != -1 ) {
+				return 'Chrome';
+			} else if(navigator.userAgent.indexOf("Safari") != -1) {
+				return 'Safari';
+			} else if(navigator.userAgent.indexOf("Firefox") != -1 ){
+				return 'Firefox';
+			} else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+				return 'IE';
+			} else {
+				return 'Unknown';
+			}
+		} 
+	
+		//w3schools
+		function getCookie(cname) {
+		  var name = cname + "=";
+		  var decodedCookie = decodeURIComponent(document.cookie);
+		  var ca = decodedCookie.split(';');
+		  for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+			  c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+			  return c.substring(name.length, c.length);
+			}
+		  }
+		  return "";
 	}
 	
   </script>
